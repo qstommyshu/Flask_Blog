@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager
 
 
 app = Flask(__name__)
@@ -10,6 +12,11 @@ app.config['SECRET_KEY']='8404614bbac7423bb777ea1aba1f94c08d8ffd200c8975d4a5749f
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
 db = SQLAlchemy(app)
+bcrypt=Bcrypt(app)
+Login_manager=LoginManager(app)
+Login_manager.login_view='login'
+Login_manager.login_message_category='info'
+
 
 #Set to development model
 app.config['ENV'] = 'development'
