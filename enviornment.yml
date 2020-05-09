@@ -1,0 +1,10 @@
+name: flaskenv
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - anaconda
+  - flask
+  - wtforms
+prefix: C:\Users\xshuq\Anaconda3\envs\flaskenv
+
