@@ -12,4 +12,4 @@ class Config:
     #Set to development model
     ENV = 'development'
     DEBUG = True
-    TESTING = True
+    TESTING = False
